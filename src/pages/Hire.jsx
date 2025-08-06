@@ -1,4 +1,4 @@
-export default function HireMe() {
+export default function Hire() {
   return (
     <div>
       <h2>Hire Me</h2>

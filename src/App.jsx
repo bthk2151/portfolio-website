@@ -1,7 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-import HireMe from './pages/HireMe';
-import Home from './pages/Home';
+import Hire from './pages/Hire';
 import Navbar from './components/Navbar';
+import Projects from './pages/Projects';
+import About from './pages/About';
 
 export default function App() {
   return (
@@ -9,8 +10,9 @@ export default function App() {
       <Navbar />
       <div className="container mt-4">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/hire-me" element={<HireMe />} />
+          <Route path="/" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/hire" element={<Hire />} />
         </Routes>
       </div>
     </>
