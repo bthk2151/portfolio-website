@@ -1,4 +1,8 @@
-import me from '../assets/me.jpeg'
+import Me from '../assets/me.jpeg';
+import MeWithBike from '../assets/me-with-bike.jpeg';
+import IconMotorbike from '../assets/icons/motorbike.png';
+import IconWeightlifting from '../assets/icons/weightlifting.png';
+import IconGuitar from '../assets/icons/guitar.png';
 import Divider from '../components/Divider';
 import SkillBadge from '../components/SkillBadge';
 
@@ -7,7 +11,7 @@ export default function About() {
     <div className="container">
       <div className="row align-items-center">
         <div className="col-4 px-2">
-          <img src={me} alt="A picture of a fine young lad" className="img-fluid" />
+          <img src={Me} alt="A picture of a fine young lad" className="img-fluid" />
         </div>
         <div className="col-8 px-2">
           <div className="text-center">
@@ -17,7 +21,9 @@ export default function About() {
           </div>
         </div>
       </div>
+
       <Divider />
+
       <div className="row align-items-center">
         <div className="col-4 px-2">
           <h1 className="display-4">Tech Stack</h1>
@@ -81,6 +87,33 @@ export default function About() {
           <SkillBadge text="Visual Studio" iconClass="devicon-visualstudio-plain" isMain="1" />
           <SkillBadge text="VS Code" iconClass="devicon-vscode-plain" isMain="1" />
           <SkillBadge text="Nginx" iconClass="devicon-nginx-plain" isMain="0" />
+        </div>
+      </div>
+
+      <Divider />
+
+      <div className="row align-items-center">
+        <div className="col-4 px-2">
+          <img src={MeWithBike} alt="A picture of a fine young with his ride" className="img-fluid" />
+        </div>
+        <div className="col-8 px-5">
+          <h1 className="display-6 mb-3">A Little About Me</h1>
+          <p className="lead">With a strong interest in systems and processes — especially within the fintech space — I bring deep domain knowledge, a sharp eye and a go-getter spirit for implementing modern, practical solutions. I believe the best solutions are simple, not complex — and I strive to bring that clarity and precision to every project I work on.</p>
+          <p className="lead">I incorporate AI extensively to accelerate my development delivery, but never at the expense of fully understanding the technologies, processes and functionalities in place. I do not believe that AI is here to replace our professions — but to evolve them instead. As the landscape shifts, I believe that remaining agile and adaptable is the key in remaining relevant and thriving.</p>
+          <p className="lead">Aside from building solutions, some of my hobbies include:</p>
+          {/* lazy to figure out a way to componentize the below HobbyBadges due to specific image icons needed */}
+          <div className="badge bg-dark d-inline-flex align-items-center px-3 py-2 me-2 mb-2">
+            <span className="lead me-2">Motorcycling</span>
+            <img src={IconMotorbike} alt="Motorcycling" height={30} />
+          </div>
+          <div className="badge bg-dark d-inline-flex align-items-center px-3 py-2 me-2 mb-2">
+            <span className="lead me-2">Weightlifting</span>
+            <img src={IconWeightlifting} alt="Weightlifting" height={30} />
+          </div>
+          <div className="badge bg-dark d-inline-flex align-items-center px-3 py-2 me-2 mb-2">
+            <span className="lead me-2">Instruments</span>
+            <img src={IconGuitar} alt="Instruments" height={30} />
+          </div>
         </div>
       </div>
     </div>

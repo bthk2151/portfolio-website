@@ -1,8 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import Hire from './pages/Hire';
 import Navbar from './components/Navbar';
-import Projects from './pages/Projects';
 import About from './pages/About';
+import Experience from './pages/Experience';
+import Hire from './pages/Hire';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
@@ -11,10 +12,11 @@ export default function App() {
       <div className="container mt-4">
         <Routes>
           <Route path="/" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/experience" element={<Experience />} />
           <Route path="/hire" element={<Hire />} />
         </Routes>
       </div>
+      <Footer />
     </>
   );
 }
