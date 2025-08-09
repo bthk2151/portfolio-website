@@ -1,10 +1,13 @@
-import Me from '../assets/me.jpeg';
-import MeWithBike from '../assets/me-with-bike.jpeg';
-import IconMotorbike from '../assets/icons/motorbike.png';
-import IconWeightlifting from '../assets/icons/weightlifting.png';
-import IconGuitar from '../assets/icons/guitar.png';
 import Divider from '../components/Divider';
 import SkillBadge from '../components/SkillBadge';
+import HobbyBadge from '../components/HobbyBadge';
+
+import imgMe from '../assets/me.jpeg';
+import imgMeWithBike from '../assets/me-with-bike.jpeg';
+import imgMotorbike from '../assets/icons/motorbike.png';
+import imgWeightlifting from '../assets/icons/weightlifting.png';
+import imgInstrument from '../assets/icons/guitar.png';
+import imgCoffee from '../assets/icons/coffee.png';
 
 export default function About() {
   return (
@@ -12,7 +15,7 @@ export default function About() {
       {/* Intro */}
       <div className="row align-items-center mb-4">
         <div className="col-12 col-md-4 px-4 px-md-2 mb-3 mb-md-0">
-          <img src={Me} alt="A picture of a fine young lad" className="img-fluid rounded shadow-sm" />
+          <img src={imgMe} alt="A picture of a fine young lad" className="img-fluid rounded shadow-sm" />
         </div>
         <div className="col-12 col-md-8 px-2 text-center text-md-start">
           <h1 className="display-5">Hi, I'm Bryan Tan Hoe Kin</h1>
@@ -97,27 +100,18 @@ export default function About() {
       {/* About Me */}
       <div className="row align-items-center">
         <div className="col-12 col-md-4 px-4 px-md-2 mb-3 mb-md-0">
-          <img src={MeWithBike} alt="A picture of a fine young with his ride" className="img-fluid rounded shadow-sm" />
+          <img src={imgMeWithBike} alt="A picture of a fine young with his ride" className="img-fluid rounded shadow-sm" />
         </div>
         <div className="col-12 col-md-8 px-3 text-center text-md-start">
           <h1 className="display-6 mb-3">A Little About Me</h1>
           <p className="regular-text">With a strong interest in systems and processes — especially within the fintech space — I bring deep domain knowledge, a sharp eye and a go-getter spirit for implementing modern, practical solutions. I believe the best solutions are simple, not complex — and I strive to bring that clarity and precision to every project I work on.</p>
           <p className="regular-text">I incorporate AI extensively to accelerate my development delivery, but never at the expense of fully understanding the technologies, processes and functionalities in place. I do not believe that AI is here to replace our professions — but to evolve them instead. As the landscape shifts, I believe that remaining agile and adaptable is the key in remaining relevant and thriving.</p>
           <p className="regular-text">Aside from building solutions, some of my hobbies include:</p>
-          {/* lazy to figure out a way to componentize the below HobbyBadges due to specific image icons needed */}
           <div className="d-flex flex-wrap justify-content-center justify-content-md-start">
-            <div className="badge bg-dark d-inline-flex align-items-center px-3 py-2 me-2 mb-2">
-              <span className="regular-text me-2">Motorcycling</span>
-              <img src={IconMotorbike} alt="Motorcycling" height={20} />
-            </div>
-            <div className="badge bg-dark d-inline-flex align-items-center px-3 py-2 me-2 mb-2">
-              <span className="regular-text me-2">Weightlifting</span>
-              <img src={IconWeightlifting} alt="Weightlifting" height={20} />
-            </div>
-            <div className="badge bg-dark d-inline-flex align-items-center px-3 py-2 me-2 mb-2">
-              <span className="regular-text me-2">Instruments</span>
-              <img src={IconGuitar} alt="Instruments" height={20} />
-            </div>
+            <HobbyBadge text="Motorcycling" imgSrc={imgMotorbike} />
+            <HobbyBadge text="Weightlifting" imgSrc={imgWeightlifting} />
+            <HobbyBadge text="Instruments" imgSrc={imgInstrument} />
+            <HobbyBadge text="Coffee" imgSrc={imgCoffee} />
           </div>
         </div>
       </div>
