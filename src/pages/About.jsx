@@ -52,6 +52,7 @@ export default function About() {
               <p className="lead mb-2">Backend</p>
               <SkillBadge text="ASP.NET" iconClass="devicon-dot-net-plain" isMain="1" />
               <SkillBadge text=".NET Core" iconClass="devicon-dotnetcore-plain" isMain="1" />
+              <SkillBadge text="Entity Framework" iconClass="devicon-entityframeworkcore-plain" isMain="1" />
               <SkillBadge text="Node.js" iconClass="devicon-nodejs-plain" isMain="0" />
               <SkillBadge text="Django" iconClass="devicon-python-plain" isMain="0" />
             </div>
@@ -80,6 +81,7 @@ export default function About() {
             <div className="col-12 col-sm-6">
               <p className="lead mb-2">Cloud</p>
               <SkillBadge text="Azure" iconClass="devicon-azure-plain" isMain="1" />
+              <SkillBadge text="Vercel" iconClass="devicon-vercel-plain" isMain="0" />
               <SkillBadge text="Google Cloud" iconClass="devicon-googlecloud-plain" isMain="0" />
               <SkillBadge text="Nginx" iconClass="devicon-nginx-plain" isMain="0" />
             </div>
