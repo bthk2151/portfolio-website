@@ -18,6 +18,10 @@
     font-weight: 300;
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 .footer-text {
     font-size: .75rem;
 }

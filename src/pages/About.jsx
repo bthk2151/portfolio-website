@@ -106,9 +106,9 @@ export default function About() {
         </div>
         <div className="col-12 col-md-8 px-3 text-center text-md-start">
           <h1 className="display-6 mb-3">A Little About Me</h1>
-          <p className="regular-text">With a strong interest in systems and processes — especially within the fintech space — I bring deep domain knowledge, a sharp eye and a go-getter spirit for implementing modern, practical solutions. I believe the best solutions are simple, not complex — and I strive to bring that clarity and precision to every project I work on.</p>
-          <p className="regular-text">I incorporate AI extensively to accelerate my development delivery, but never at the expense of fully understanding the technologies, processes and functionalities in place. I do not believe that AI is here to replace our professions — but to evolve them instead. As the landscape shifts, I believe that remaining agile and adaptable is the key in remaining relevant and thriving.</p>
-          <p className="regular-text">Aside from building solutions, some of my hobbies include:</p>
+          <p className="regular-text text-justify">With a strong interest in systems and processes — especially within the fintech space — I bring deep domain knowledge, a sharp eye and a go-getter spirit for implementing modern, practical solutions. I believe the best solutions are simple, not complex — and I strive to bring that clarity and precision to every project I work on.</p>
+          <p className="regular-text text-justify">I incorporate AI extensively to accelerate my development delivery, but never at the expense of fully understanding the technologies, processes and functionalities in place. I do not believe that AI is here to replace our professions — but to evolve them instead. As the landscape shifts, I believe that remaining agile and adaptable is the key in remaining relevant and thriving.</p>
+          <p className="regular-text text-justify">Aside from building solutions, some of my hobbies include:</p>
           <div className="d-flex flex-wrap justify-content-center justify-content-md-start">
             <HobbyBadge text="Motorcycling" imgSrc={imgMotorbike} />
             <HobbyBadge text="Weightlifting" imgSrc={imgWeightlifting} />
