@@ -77,3 +77,16 @@
 }
 
 /* #endregion */
+
+/* #region Contact.jsx */
+.accordion-button:not(.collapsed) {
+    color: inherit;
+    background-color: #dfe0e1;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* #endregion */
