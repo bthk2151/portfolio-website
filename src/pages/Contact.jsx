@@ -1,9 +1,16 @@
 import Accordian from "../components/Accordian";
+import Divider from "../components/Divider";
+import ContactButton from "../components/ContactButton";
+
 import imgSoftware from '../assets/services/software.png';
 import imgAutomation from '../assets/services/automation.png';
 import imgData from '../assets/services/data.png';
 import imgIntegrated from '../assets/services/integrated.png';
-import Divider from "../components/Divider";
+import imgLinkedin from '../assets/contact/linkedin.png';
+import imgWhatsapp from '../assets/contact/whatsapp.png';
+import imgGmail from '../assets/contact/gmail.png';
+import imgInstagram from '../assets/contact/instagram.png';
+
 
 const servicesAccordianData = [
   {
@@ -50,8 +57,15 @@ export default function Contact() {
       <div className="row align-items-center">
         <div className="col-12 px-2 text-center">
           <h1 className="display-6 mb-3">Let's Get In Touch</h1>
-          <p className="lead mb-4">Don't be a stranger — conect with me on my socials below!</p>
+          <p className="lead mb-2">Got a project or idea I can help bring to life?</p>
+          <p className="lead mb-4">Reach out and let us see how we can work together — connect with me on my socials below!</p>
 
+          <div className="d-flex flex-wrap justify-content-center gap-3 mb-4">
+            <ContactButton text="LinkedIn" imgSrc={imgLinkedin} redirectUrl="https://my.linkedin.com/in/bryan-tan-hoe-kin-60085b1b1" />
+            <ContactButton text="Email" imgSrc={imgGmail} redirectUrl="mailto:bthk2151@gmail.com?subject=Solutions%20Development%20Inquiry&body=Hi%20Bryan%2C%20I%20am%20interested%20in%20your%20solutions%20development%20services." />
+            <ContactButton text="WhatsApp" imgSrc={imgWhatsapp} redirectUrl="https://wa.me/60173682770?text=Hi%20Bryan%2C%20I%20am%20interested%20in%20your%20solutions%20development%20services." />
+            <ContactButton text="Instagram" imgSrc={imgInstagram} redirectUrl="https://instagram.com/bthk2151" />
+          </div>
         </div>
       </div>
     </div>
