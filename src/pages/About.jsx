@@ -93,7 +93,6 @@ export default function About() {
           <SkillBadge text="Swagger" iconClass="devicon-swagger-plain" />
           <SkillBadge text="Visual Studio" iconClass="devicon-visualstudio-plain" />
           <SkillBadge text="VS Code" iconClass="devicon-vscode-plain" />
-          <SkillBadge text="Nginx" iconClass="devicon-nginx-plain" />
         </div>
       </div>
 
