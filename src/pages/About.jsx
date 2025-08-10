@@ -27,73 +27,73 @@ export default function About() {
       <Divider />
 
       {/* Tech Stack */}
-      <div className="row align-items-start">
+      <div className="row align-items-center">
         <div className="col-12 col-md-4 px-2 mb-3 mb-md-0 text-center text-md-start">
           <h1 className="display-6">Tech Stack</h1>
           <p className="lead mb-2 mb-md-0">
-            <span className="badge bg-dark p-2">Darker</span> badges indicate strong proficiency
+            Throughout my career, I have worked extensively with a wide range of languages, frameworks, and tools
           </p>
         </div>
         <div className="col-12 col-md-8 px-3">
           <div className="row">
             <div className="col-12 col-sm-6">
               <p className="lead mb-2">Frontend</p>
-              <SkillBadge text="HTML" iconClass="devicon-html5-plain" isMain="1" />
-              <SkillBadge text="CSS" iconClass="devicon-css3-plain" isMain="1" />
-              <SkillBadge text="SCSS" iconClass="devicon-sass-plain" isMain="1" />
-              <SkillBadge text="JavaScript" iconClass="devicon-javascript-plain" isMain="1" />
-              <SkillBadge text="jQuery" iconClass="devicon-jquery-plain" isMain="1" />
-              <SkillBadge text="React.js" iconClass="devicon-react-plain" isMain="1" />
-              <SkillBadge text="Bootstrap" iconClass="devicon-bootstrap-plain" isMain="1" />
-              <SkillBadge text="Material UI" iconClass="devicon-materialui-plain" isMain="0" />
-              <SkillBadge text="Tailwind CSS" iconClass="devicon-tailwindcss-plain" isMain="0" />
+              <SkillBadge text="HTML" iconClass="devicon-html5-plain" />
+              <SkillBadge text="CSS" iconClass="devicon-css3-plain" />
+              <SkillBadge text="SCSS" iconClass="devicon-sass-plain" />
+              <SkillBadge text="JavaScript" iconClass="devicon-javascript-plain" />
+              <SkillBadge text="jQuery" iconClass="devicon-jquery-plain" />
+              <SkillBadge text="React.js" iconClass="devicon-react-plain" />
+              <SkillBadge text="Bootstrap" iconClass="devicon-bootstrap-plain" />
+              <SkillBadge text="Material UI" iconClass="devicon-materialui-plain" />
+              <SkillBadge text="Tailwind CSS" iconClass="devicon-tailwindcss-plain" />
             </div>
             <div className="col-12 col-sm-6">
               <p className="lead mb-2">Backend</p>
-              <SkillBadge text="ASP.NET" iconClass="devicon-dot-net-plain" isMain="1" />
-              <SkillBadge text=".NET Core" iconClass="devicon-dotnetcore-plain" isMain="1" />
-              <SkillBadge text="Entity Framework" iconClass="devicon-entityframeworkcore-plain" isMain="1" />
-              <SkillBadge text="Node.js" iconClass="devicon-nodejs-plain" isMain="0" />
-              <SkillBadge text="Django" iconClass="devicon-python-plain" isMain="0" />
+              <SkillBadge text="ASP.NET" iconClass="devicon-dot-net-plain" />
+              <SkillBadge text=".NET Core" iconClass="devicon-dotnetcore-plain" />
+              <SkillBadge text="Entity Framework" iconClass="devicon-entityframeworkcore-plain" />
+              <SkillBadge text="Node.js" iconClass="devicon-nodejs-plain" />
+              <SkillBadge text="Django" iconClass="devicon-python-plain" />
             </div>
           </div>
 
           <Divider spacing={3} />
 
           <p className="lead mb-2">Database</p>
-          <SkillBadge text="Azure SQL Server" iconClass="devicon-azuresqldatabase-plain" isMain="1" />
-          <SkillBadge text="MongoDB" iconClass="devicon-mongodb-plain" isMain="1" />
-          <SkillBadge text="SQLite" iconClass="devicon-sqlite-plain" isMain="1" />
-          <SkillBadge text="MySQL" iconClass="devicon-mysql-plain" isMain="0" />
-          <SkillBadge text="PostgreSQL" iconClass="devicon-postgresql-plain" isMain="0" />
+          <SkillBadge text="Azure SQL Server" iconClass="devicon-azuresqldatabase-plain" />
+          <SkillBadge text="MongoDB" iconClass="devicon-mongodb-plain" />
+          <SkillBadge text="SQLite" iconClass="devicon-sqlite-plain" />
+          <SkillBadge text="MySQL" iconClass="devicon-mysql-plain" />
+          <SkillBadge text="PostgreSQL" iconClass="devicon-postgresql-plain" />
 
           <Divider spacing={3} />
 
           <div className="row">
             <div className="col-12 col-sm-6">
               <p className="lead mb-2">DevOps</p>
-              <SkillBadge text="Azure DevOps" iconClass="devicon-azuredevops-plain" isMain="1" />
-              <SkillBadge text="Git" iconClass="devicon-git-plain" isMain="1" />
-              <SkillBadge text="Docker" iconClass="devicon-docker-plain" isMain="0" />
-              <SkillBadge text="OpenShift" iconClass="devicon-redhat-plain" isMain="0" />
-              <SkillBadge text="SonarQube" iconClass="devicon-sonarqube-plain" isMain="0" />
+              <SkillBadge text="Azure DevOps" iconClass="devicon-azuredevops-plain" />
+              <SkillBadge text="Git" iconClass="devicon-git-plain" />
+              <SkillBadge text="Docker" iconClass="devicon-docker-plain" />
+              <SkillBadge text="OpenShift" iconClass="devicon-redhat-plain" />
+              <SkillBadge text="SonarQube" iconClass="devicon-sonarqube-plain" />
             </div>
             <div className="col-12 col-sm-6">
               <p className="lead mb-2">Cloud</p>
-              <SkillBadge text="Azure" iconClass="devicon-azure-plain" isMain="1" />
-              <SkillBadge text="Vercel" iconClass="devicon-vercel-plain" isMain="0" />
-              <SkillBadge text="Google Cloud" iconClass="devicon-googlecloud-plain" isMain="0" />
-              <SkillBadge text="Nginx" iconClass="devicon-nginx-plain" isMain="0" />
+              <SkillBadge text="Azure" iconClass="devicon-azure-plain" />
+              <SkillBadge text="Vercel" iconClass="devicon-vercel-plain" />
+              <SkillBadge text="Google Cloud" iconClass="devicon-googlecloud-plain" />
+              <SkillBadge text="Nginx" iconClass="devicon-nginx-plain" />
             </div>
           </div>
           <Divider spacing={3} />
 
           <p className="lead mb-2">Development Tools</p>
-          <SkillBadge text="Postman" iconClass="devicon-postman-plain" isMain="1" />
-          <SkillBadge text="Swagger" iconClass="devicon-swagger-plain" isMain="1" />
-          <SkillBadge text="Visual Studio" iconClass="devicon-visualstudio-plain" isMain="1" />
-          <SkillBadge text="VS Code" iconClass="devicon-vscode-plain" isMain="1" />
-          <SkillBadge text="Nginx" iconClass="devicon-nginx-plain" isMain="0" />
+          <SkillBadge text="Postman" iconClass="devicon-postman-plain" />
+          <SkillBadge text="Swagger" iconClass="devicon-swagger-plain" />
+          <SkillBadge text="Visual Studio" iconClass="devicon-visualstudio-plain" />
+          <SkillBadge text="VS Code" iconClass="devicon-vscode-plain" />
+          <SkillBadge text="Nginx" iconClass="devicon-nginx-plain" />
         </div>
       </div>
 
