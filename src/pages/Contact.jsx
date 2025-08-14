@@ -4,14 +4,12 @@ import ContactButton from "../components/ContactButton";
 
 import imgSoftware from '../assets/services/software.png';
 import imgDeveloper from '../assets/services/developer.png';
-import imgAutomation from '../assets/services/automation.png';
 import imgData from '../assets/services/data.png';
 import imgIntegrated from '../assets/services/integrated.png';
 import imgLinkedin from '../assets/contact/linkedin.png';
 import imgWhatsapp from '../assets/contact/whatsapp.png';
 import imgGmail from '../assets/contact/gmail.png';
 import imgInstagram from '../assets/contact/instagram.png';
-
 
 const servicesAccordianData = [
   {

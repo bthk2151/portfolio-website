@@ -5,6 +5,8 @@ import Experience from './pages/Experience';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 
+import { Analytics } from "@vercel/analytics/react"
+
 export default function App() {
   return (
     <>
@@ -17,6 +19,7 @@ export default function App() {
         </Routes>
       </div>
       <Footer />
+      <Analytics />
     </>
   );
 }
