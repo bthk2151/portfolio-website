@@ -3,6 +3,7 @@ import Divider from "../components/Divider";
 import ContactButton from "../components/ContactButton";
 
 import imgSoftware from '../assets/services/software.png';
+import imgDeveloper from '../assets/services/developer.png';
 import imgAutomation from '../assets/services/automation.png';
 import imgData from '../assets/services/data.png';
 import imgIntegrated from '../assets/services/integrated.png';
@@ -19,13 +20,13 @@ const servicesAccordianData = [
     imgSrc: imgSoftware
   },
   {
-    title: "Automation & Workflow Optimization",
-    description: "Optimize your operations with intelligent automation and custom-built tools designed to save time, reduce errors, and boost productivity.",
-    imgSrc: imgAutomation
+    title: "Collaborative Development",
+    description: "Looking for an extra set of hands on your project? I am readily available to join your team, working closely with stakeholders, developers, and designers to deliver on functional requirements and ensure seamless collaboration from start to finish.",
+    imgSrc: imgDeveloper
   },
   {
     title: "Data Solutions",
-    description: "From raw data to actionable insights — I will collaborate with a partner who specializes in designing pipelines, structuring data, and building tools to help you harness the full power of your information.",
+    description: "From raw data to actionable insights — I will collaborate closely with a partner who specializes in designing pipelines, structuring data, and building tools with machine learning capabilities to help you harness the full power of your information.",
     imgSrc: imgData
   },
   {
