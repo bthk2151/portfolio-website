@@ -60,7 +60,7 @@ export default function Contact() {
           <p className="lead mb-4">Reach out and let us see how we can work together — connect with me on my socials below!</p>
 
           <div className="d-flex flex-wrap justify-content-center gap-3 mb-4">
-            <ContactButton text="LinkedIn" imgSrc={imgLinkedin} redirectUrl="https://my.linkedin.com/in/bryan-tan-hoe-kin-60085b1b1" />
+            <ContactButton text="LinkedIn" imgSrc={imgLinkedin} redirectUrl="https://www.linkedin.com/in/bthk2151/" />
             <ContactButton text="Email" imgSrc={imgGmail} redirectUrl="mailto:bthk2151@gmail.com?subject=Solutions%20Development%20Inquiry&body=Hi%20Bryan%2C%20I%20am%20interested%20in%20your%20solutions%20development%20services." />
             <ContactButton text="WhatsApp" imgSrc={imgWhatsapp} redirectUrl="https://wa.me/60173682770?text=Hi%20Bryan%2C%20I%20am%20interested%20in%20your%20solutions%20development%20services." />
             <ContactButton text="Instagram" imgSrc={imgInstagram} redirectUrl="https://instagram.com/bthk2151" />

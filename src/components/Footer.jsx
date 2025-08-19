@@ -9,7 +9,7 @@ export default function Footer() {
         </span>
 
         <div>
-          <SocialIconLink iconClass="devicon-linkedin-plain" redirectUrl="https://my.linkedin.com/in/bryan-tan-hoe-kin-60085b1b1" />
+          <SocialIconLink iconClass="devicon-linkedin-plain" redirectUrl="https://www.linkedin.com/in/bthk2151/" />
           <SocialIconLink iconClass="devicon-github-plain" redirectUrl="https://github.com/bthk2151" />
         </div>
       </div>
