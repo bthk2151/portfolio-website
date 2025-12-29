@@ -13,7 +13,7 @@ import imgInstagram from '../assets/contact/instagram.png';
 
 const servicesAccordianData = [
   {
-    title: "Product Development & Maintenence",
+    title: "Product Development & Maintenance",
     description: "From concept to launch, I craft bespoke, 0-to-1 software solutions, tailored to your vision and provide ongoing support to ensure they stay actively up-to-date.",
     imgSrc: imgSoftware
   },

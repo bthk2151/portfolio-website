@@ -71,7 +71,7 @@ export default function Experience() {
                   { text: "Bootstrap", iconClass: "devicon-bootstrap-plain" },
                   { text: "Vercel", iconClass: "devicon-vercel-plain" }
                 ]}
-                projectUrl="https://portfolio-website-beige-sigma.vercel.app/"
+                projectUrl="https://bthk2151.dev"
                 githubUrl="https://github.com/bthk2151/portfolio-website"
               />
             </div>
