@@ -1,25 +1,27 @@
-import Divider from '../components/Divider';
-import SkillBadge from '../components/SkillBadge';
-import HobbyBadge from '../components/HobbyBadge';
+import Image from "next/image";
 
-import imgMe from '../assets/me.jpeg';
-import imgMeWithBike from '../assets/me-with-bike.jpeg';
-import imgMotorbike from '../assets/icons/motorbike.png';
-import imgWeightlifting from '../assets/icons/weightlifting.png';
-import imgInstrument from '../assets/icons/guitar.png';
-import imgCoffee from '../assets/icons/coffee.png';
+import Divider from "@/components/Divider";
 
-export default function About() {
+import imgMe from '@/assets/me/me.jpeg';
+import imgMeWithBike from '@/assets/me/me-with-bike.jpeg';
+import imgMotorbike from '@/assets/hobby-icons/motorbike.png';
+import imgWeightlifting from '@/assets/hobby-icons/weightlifting.png';
+import imgInstrument from '@/assets/hobby-icons/guitar.png';
+import imgCoffee from '@/assets/hobby-icons/coffee.png';
+import SkillBadge from "@/components/SkillBadge";
+import HobbyBadge from "@/components/HobbyBadge";
+
+export default function AboutMe() {
   return (
-    <div className="container">
+    <div className="container page-content">
       {/* Intro */}
       <div className="row align-items-center mb-4">
         <div className="col-12 col-md-4 px-4 px-md-2 mb-3 mb-md-0">
-          <img src={imgMe} alt="A picture of a fine young lad" className="img-fluid rounded shadow-sm" />
+          <Image src={imgMe} alt="A picture of a fine young lad" className="img-fluid rounded shadow-sm" />
         </div>
         <div className="col-12 col-md-8 px-2 text-center text-md-start">
           <h1 className="display-5">Hi, I'm Bryan Tan Hoe Kin</h1>
-          <p className="lead mb-0">Full-Stack C# .NET Developer | Software Engineer | Aspiring Solutions Architect</p>
+          <p className="lead mb-0">Full-Stack C# .NET Developer | Software Engineer | Solutions Architect</p>
           <small className="lead text-muted">Future Serial Techpreneur</small>
         </div>
       </div>
@@ -44,6 +46,7 @@ export default function About() {
               <SkillBadge text="JavaScript" iconClass="devicon-javascript-plain" />
               <SkillBadge text="jQuery" iconClass="devicon-jquery-plain" />
               <SkillBadge text="React.js" iconClass="devicon-react-plain" />
+              <SkillBadge text="Next.js" iconClass="devicon-nextjs-plain" />
               <SkillBadge text="Bootstrap" iconClass="devicon-bootstrap-plain" />
               <SkillBadge text="Material UI" iconClass="devicon-materialui-plain" />
               <SkillBadge text="Tailwind CSS" iconClass="devicon-tailwindcss-plain" />
@@ -101,7 +104,7 @@ export default function About() {
       {/* About Me */}
       <div className="row align-items-center">
         <div className="col-12 col-md-4 px-4 px-md-2 mb-3 mb-md-0">
-          <img src={imgMeWithBike} alt="A picture of a fine young with his ride" className="img-fluid rounded shadow-sm" />
+          <Image src={imgMeWithBike} alt="A picture of a fine young with his ride" className="img-fluid rounded shadow-sm" />
         </div>
         <div className="col-12 col-md-8 px-3 text-center text-md-start">
           <h1 className="display-6 mb-3">A Little About Me</h1>

@@ -1,9 +1,28 @@
+import Image, { StaticImageData } from "next/image";
+
 import SkillBadge from "./SkillBadge";
 
-export default function ProjectCard({ title, imgSrc, description, skills = [], projectUrl = null, githubUrl = null }) {
+interface ProjectCardProps {
+    title: string;
+    imgSrc: StaticImageData;
+    description: string;
+    skills?: SkillBadgeProps[];
+    projectUrl?: string | null;
+    githubUrl?: string | null;
+}
+
+interface SkillBadgeProps {
+    text: string;
+    iconClass: string;
+    isMain?: number;
+    includeMargin?: number;
+}
+
+
+export default function ProjectCard({ title, imgSrc, description, skills = [], projectUrl = null, githubUrl = null }: ProjectCardProps) {
     return (
         <div className="card shadow-sm text-start">
-            <img src={imgSrc} className="card-img-top" alt={title} />
+            <Image src={imgSrc} className="card-img-top h-auto" alt={title} />
             <div className="card-body my-3 project-card-text-section">
                 <h5 className="card-title lead fw-normal">{title}</h5>
                 <p className="card-text regular-text" dangerouslySetInnerHTML={{ __html: description }}></p>
