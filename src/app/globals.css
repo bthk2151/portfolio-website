@@ -1,15 +1,37 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 /* #region Navbar.jsx */
-.navbar-toggler {
+.navbar {
+  background-color: #f8f9fa;
+}
+
+[data-bs-theme=dark] .navbar {
+  background-color: #2b3035;
+}
+
+.navbar-toggler,
+.darkmode-toggler {
   border: none;
   box-shadow: none !important;
 }
 
 .navbar-toggler:focus,
-.navbar-toggler:active {
+.navbar-toggler:active,
+.darkmode-toggler:focus,
+.darkmode-toggler:active {
   outline: none;
   box-shadow: none !important;
+}
+
+/* #endregion */
+
+/* #region Footer.jsx */
+.footer {
+  background-color: #f8f9fa;
+}
+
+[data-bs-theme=dark] .footer {
+  background-color: #2b3035;
 }
 
 /* #endregion */
@@ -76,6 +98,10 @@
   background-color: #212529;
 }
 
+[data-bs-theme=dark] .timeline::before {
+  background-color: #F8F9FA;
+}
+
 .timeline-item {
   position: relative;
   padding-left: 1.5rem;
@@ -90,6 +116,10 @@
   height: .4rem;
   width: .4rem;
   top: .65rem;
+}
+
+[data-bs-theme=dark] .timeline-item::before {
+  background-color: #F8F9FA;
 }
 
 .timeline-img {
@@ -116,9 +146,52 @@
   background-color: #dfe0e1;
 }
 
+[data-bs-theme=dark] .accordion-button:not(.collapsed) {
+  color: inherit;
+  background-color: #444a57;
+}
+
 .accordion-button:focus {
   box-shadow: none;
   outline: none;
+}
+
+/* #endregion */
+
+/* #region common components */
+.divider {
+  border-color: #212529 !important;
+}
+
+[data-bs-theme=dark] .divider {
+  border-color: #F8F9FA !important;
+}
+
+.skill-badge {
+  background-color: #212529;
+  color: #FFFFFF;
+}
+
+[data-bs-theme=dark] .skill-badge {
+  background-color: #444a57;
+}
+
+.btn-contact {
+  background-color: #212529;
+  color: #FFFFFF;
+  border-color: #212529;
+}
+
+[data-bs-theme=dark] .btn-contact {
+  background-color: #F8F9FA;
+  color: #000000;
+  border: #F8F9FA;
+}
+
+[data-bs-theme=dark] .btn-contact:hover {
+  background-color: #212529;
+  color: #FFFFFF;
+  border: #212529;
 }
 
 /* #endregion */
