@@ -57,7 +57,7 @@ export default function AboutMe() {
               <SkillBadge text=".NET Core" iconClass="devicon-dotnetcore-plain" />
               <SkillBadge text="Entity Framework" iconClass="devicon-entityframeworkcore-plain" />
               <SkillBadge text="Node.js" iconClass="devicon-nodejs-plain" />
-              <SkillBadge text="Django" iconClass="devicon-python-plain" />
+              <SkillBadge text="Django" iconClass="devicon-django-plain" />
             </div>
           </div>
 
