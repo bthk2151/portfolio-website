@@ -79,7 +79,7 @@ const projectsData = [
         skills: [
             { text: "React.js", iconClass: "devicon-react-plain" },
             { text: "Material UI", iconClass: "devicon-materialui-plain" },
-            { text: "Django", iconClass: "devicon-python-plain" },
+            { text: "Django", iconClass: "devicon-django-plain" },
             { text: "MySQL", iconClass: "devicon-mysql-plain" }
         ],
         githubUrl: "https://github.com/bthk2151/PersonalFinanceProject"
