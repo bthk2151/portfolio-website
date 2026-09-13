@@ -5,6 +5,7 @@ import imgTradingBot from '@/assets/projects/trading-bot.png';
 import imgPortfolioWebsite from '@/assets/projects/portfolio-website.png';
 import imgPfp from '@/assets/projects/pfp.png';
 import imgC19Memorial from '@/assets/projects/c19memorial.png';
+import imgRagBot from '@/assets/projects/rag-bot.png';
 
 import Divider from '@/components/Divider';
 import Timeline from '@/components/Timeline';
@@ -37,6 +38,20 @@ const careerTimelineData = [
 ];
 
 const projectsData = [
+    {
+        title: "RAG Bot",
+        description: "Built with a partner, RAG Bot turns uploaded files into searchable vector embeddings, retrieves relevant context for Gemini-powered answers, and secures backend requests with short-lived JWTs. See the architecture infographic in the repository's README.md.",
+        imgSrc: imgRagBot,
+        skills: [
+            { text: "React.js", iconClass: "devicon-react-plain" },
+            { text: "Next.js", iconClass: "devicon-nextjs-plain" },
+            { text: "Tailwind CSS", iconClass: "devicon-tailwindcss-original" },
+            { text: "FastAPI", iconClass: "devicon-fastapi-plain" },
+            { text: "Gemini", iconClass: "devicon-google-plain" }
+        ],
+        projectUrl: "https://chatbot-ui-zeta-eight-78.vercel.app/",
+        githubUrl: "https://github.com/bthk2151/chatbot-ui"
+    },
     {
         title: "Sentiment Trading Bot",
         description: "Alongside a partner, we built a sentiment-driven trading bot using the Alpaca Broker Trading API for live execution and the Lumibot library to design and backtest our strategy.",
