@@ -40,7 +40,7 @@ const careerTimelineData = [
 const projectsData = [
     {
         title: "RAG Bot",
-        description: "Built with a partner, RAG Bot turns uploaded files into searchable vector embeddings, retrieves relevant context for Gemini-powered answers, and secures backend requests with short-lived JWTs. See the architecture infographic in the repository's README.md.",
+        description: "Built with a partner, RAG Bot turns uploaded files into searchable vector embeddings, retrieves relevant context for Gemini-powered answers, and secures backend requests with short-lived JWTs.",
         imgSrc: imgRagBot,
         skills: [
             { text: "React.js", iconClass: "devicon-react-plain" },
