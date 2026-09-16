@@ -1,49 +1,90 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
+import type { projects } from "@/data/portfolio";
+import Icon from "./Icon";
+type Project = (typeof projects)[number];
 
-import SkillBadge from "./SkillBadge";
-
-interface ProjectCardProps {
-    title: string;
-    imgSrc: StaticImageData;
-    description: string;
-    skills?: SkillBadgeProps[];
-    projectUrl?: string | null;
-    githubUrl?: string | null;
-}
-
-interface SkillBadgeProps {
-    text: string;
-    iconClass: string;
-    isMain?: number;
-    includeMargin?: number;
-}
-
-
-export default function ProjectCard({ title, imgSrc, description, skills = [], projectUrl = null, githubUrl = null }: ProjectCardProps) {
-    return (
-        <div className="card shadow-sm text-start">
-            <Image src={imgSrc} className="card-img-top h-auto" alt={title} />
-            <div className="card-body my-3 project-card-text-section">
-                <h5 className="card-title lead fw-normal">{title}</h5>
-                <p className="card-text regular-text" dangerouslySetInnerHTML={{ __html: description }}></p>
-            </div>
-            <ul className="list-group list-group-flush">
-                <li className="list-group-item regular-text project-card-skill-section">
-                    {skills.map((skill, index) => (
-                        <SkillBadge key={index} text={skill.text} iconClass={skill.iconClass} />
-                    ))}
-                </li>
-            </ul>
-            <div className="card-body text-end">
-                {projectUrl &&
-                    <a href={projectUrl} target="_blank" rel="noopener noreferrer" className="text-muted me-3">
-                        <i className="devicon-chrome-plain" style={{ fontSize: '20px', marginLeft: '8px' }}></i>
-                    </a>}
-                {githubUrl &&
-                    <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="text-muted me-3">
-                        <i className="devicon-github-plain" style={{ fontSize: '20px', marginLeft: '8px' }}></i>
-                    </a>}
-            </div>
+export default function ProjectCard({
+  project,
+  index,
+}: {
+  project: Project;
+  index: number;
+}) {
+  const featured = index === 0;
+  return (
+    <article className={`project-card${featured ? " project-featured" : ""}`}>
+      <a
+        className={`project-visual visual-${project.theme}`}
+        href={project.projectUrl ?? project.githubUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Explore ${project.title}`}
+      >
+        <div className="project-visual-top">
+          <span>{String(index + 1).padStart(2, "0")} / SELECTED WORK</span>
+          <span className="project-launch">
+            <Icon name="arrow-up-right" />
+          </span>
         </div>
-    );
-};
+        <div className="project-browser">
+          <div className="browser-bar" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+            <small>{project.title}</small>
+          </div>
+          <Image
+            src={project.image}
+            alt={project.imageAlt}
+            sizes={
+              featured
+                ? "(max-width: 760px) 90vw, 65vw"
+                : "(max-width: 760px) 90vw, 44vw"
+            }
+          />
+        </div>
+        {featured && (
+          <span className="project-visual-caption">
+            YOUR DOCUMENTS. CONNECTED.
+          </span>
+        )}
+      </a>
+      <div className="project-copy">
+        <p className="eyebrow">{project.category}</p>
+        <h3>{project.title}</h3>
+        <p className="project-description">{project.description}</p>
+        <ul className="tag-list" aria-label={`${project.title} technologies`}>
+          {project.stack.map((skill) => (
+            <li key={skill}>{skill}</li>
+          ))}
+        </ul>
+        <div className="project-links">
+          {project.projectUrl && (
+            <a
+              href={project.projectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {project.title === "Portfolio Website"
+                ? "Visit website"
+                : "View project"}
+              <Icon name="arrow-up-right" />
+            </a>
+          )}
+          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+            Source code <Icon name="arrow-up-right" />
+          </a>
+          {"pressUrl" in project && project.pressUrl && (
+            <a
+              href={project.pressUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              In the press <Icon name="arrow-up-right" />
+            </a>
+          )}
+        </div>
+      </div>
+    </article>
+  );
+}
