@@ -1,45 +1,50 @@
-import Image, { StaticImageData } from "next/image"
+"use client";
 
-interface ServicesAccordianProps {
-    items?: ServicesAccordianItemProps[];
-}
+import { useId, useState } from "react";
+import { services } from "@/data/portfolio";
+import Icon from "./Icon";
+export default function ServicesAccordian() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const id = useId();
 
-interface ServicesAccordianItemProps {
-    index?: number | null; // allow index to be nullable to avoid requiring it when used in parent component
-    title: string;
-    description: string;
-    imgSrc: StaticImageData;
-}
+  return (
+    <div className="services-list">
+      {services.map((service, index) => {
+        const isOpen = openIndex === index;
+        const triggerId = `${id}-trigger-${index}`;
+        const panelId = `${id}-panel-${index}`;
 
-export default function ServicesAccordian({ items = [] }: ServicesAccordianProps) {
-    return (
-        <div className="accordion" id="Accordian" >
-            {
-                items.map((item, index) =>
-                    <ServicesAccordianItem
-                        key={index}
-                        index={index}
-                        title={item.title}
-                        description={item.description}
-                        imgSrc={item.imgSrc} />
-                )
-            }
-        </div>
-    )
-};
-
-function ServicesAccordianItem({ index, title, description, imgSrc }: ServicesAccordianItemProps) {
-    return (
-        <div className="accordion-item">
-            <h2 className="accordion-header" id={`heading${index}`}>
-                <button className={`accordion-button ${index != 0 ? "collapsed" : ""}`} type="button" data-bs-toggle="collapse" data-bs-target={`#collapse${index}`} aria-expanded={index == 0 ? "true" : "false"} aria-controls={`#collapse${index}`}>
-                    <div className="lead fw-normal me-3">{title}</div>
-                    <Image src={imgSrc} alt={title} height={35} className="me-3" />
-                </button>
-            </h2>
-            <div id={`collapse${index}`} className={`accordion-collapse collapse ${index == 0 ? "show" : ""}`} aria-labelledby={`heading${index}`} data-bs-parent="Accordian">
-                <div className="accordion-body regular-text" dangerouslySetInnerHTML={{ __html: description }}></div>
+        return (
+          <div className={`service${isOpen ? " is-open" : ""}`} key={service.title}>
+            <h3>
+              <button
+                className="service-toggle"
+                id={triggerId}
+                type="button"
+                aria-expanded={isOpen}
+                aria-controls={panelId}
+                onClick={() => setOpenIndex(isOpen ? null : index)}
+              >
+                <span className="service-number">0{index + 1}</span>
+                <span className="service-title">{service.title}</span>
+                <Icon name="plus" />
+              </button>
+            </h3>
+            <div
+              className="service-panel"
+              id={panelId}
+              role="region"
+              aria-labelledby={triggerId}
+              aria-hidden={!isOpen}
+              inert={!isOpen}
+            >
+              <div className="service-panel-inner">
+                <p>{service.description}</p>
+              </div>
             </div>
-        </div>
-    )
-};
+          </div>
+        );
+      })}
+    </div>
+  );
+}

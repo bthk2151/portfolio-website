@@ -1,41 +1,34 @@
-import Image, { StaticImageData } from "next/image";
-
-interface TimelineProps {
-    items?: TimelineItemProps[];
-}
-
-interface TimelineItemProps {
-    title: string;
-    date: string;
-    description: string;
-    imgSrc?: StaticImageData | null;
-}
-
-export default function Timeline({ items = [] }: TimelineProps) {
-    return (
-        <ul className="timeline position-relative list-unstyled ps-4 m-0 pb-2">
-            {items.map((item, index) => (
-                <TimelineItem key={index} title={item.title} date={item.date} description={item.description} imgSrc={item.imgSrc} />
-            ))}
-        </ul>
-    );
-};
-
-function TimelineItem({ title, date, description, imgSrc = null }: TimelineItemProps) {
-    return (
-        <li className="timeline-item mb-5">
-            <div className="row">
-                <div className="col-8">
-                    <h5 className="lead fw-normal">{title}</h5>
-                    <p className="regular-text text-muted mb-2">{date}</p>
-                </div>
-                <div className="col-4 d-flex justify-content-end">
-                    {imgSrc && (
-                        <Image src={imgSrc} alt={title} className="timeline-img img-fluid rounded shadow-sm" />
-                    )}
-                </div>
+import Image from "next/image";
+import { career } from "@/data/portfolio";
+export default function Timeline() {
+  return (
+    <ol className="career-list">
+      {career.map((item, index) => (
+        <li className="career-item" key={item.company}>
+          <div className="career-date">
+            <span className={`career-dot${index === 0 ? " is-current" : ""}`} />
+            <span>{item.date}</span>
+          </div>
+          <div className="career-content">
+            <div className="career-heading">
+              <div>
+                <p className="eyebrow">{item.domain}</p>
+                <h3>{item.company}</h3>
+                <p className="career-role">{item.title}</p>
+              </div>
+              <div className="company-logo">
+                <Image
+                  src={item.image}
+                  alt={`${item.company} logo`}
+                  width={52}
+                  height={52}
+                />
+              </div>
             </div>
-            <p className="regular-text text-muted">{description}</p>
+            <p className="career-description">{item.description}</p>
+          </div>
         </li>
-    );
-};
+      ))}
+    </ol>
+  );
+}

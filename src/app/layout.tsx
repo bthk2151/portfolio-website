@@ -1,67 +1,55 @@
 import "./globals.css";
-
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-
+import { Analytics } from "@vercel/analytics/next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import BootstrapClient from '@/utils/BootstrapClient';
-import { Analytics } from "@vercel/analytics/next";
 
-const geistFont = Geist({
+const geist = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
-
 const baseUrl = "https://bthk2151.dev";
+const title = "Bryan Tan — Software Engineer & Solutions Development";
+const description =
+  "Full-stack C# .NET developer and software engineer based in Malaysia. Explore my work in fintech, AI, and practical software solutions.";
 
 export const metadata: Metadata = {
-  title: "Bryan Tan — Solutions Development",
-  description: "Full-Stack C# .NET Developer | Software Engineer | Solutions Architect",
+  title,
+  description,
   metadataBase: new URL(baseUrl),
-  icons: {
-    icon: "/favicon.png",
-  },
+  alternates: { canonical: "/" },
+  icons: { icon: "/favicon.png?v=b-monogram" },
   openGraph: {
-    title: "Bryan Tan — Solutions Development",
-    description: "Full-Stack C# .NET Developer | Software Engineer | Solutions Architect",
+    title,
+    description,
     url: baseUrl,
     type: "website",
-    images: [
-      {
-        url: `${baseUrl}/favicon.png`,
-        width: 1200,
-        height: 630,
-        alt: "Bryan Tan",
-      },
-    ],
+    locale: "en_MY",
+    siteName: "Bryan Tan",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Bryan Tan — Solutions Development",
-    description: "Full-Stack C# .NET Developer | Software Engineer | Solutions Architect",
-    images: [`${baseUrl}/favicon.png`],
-  },
-  other: {
-    "viewport": "width=device-width, initial-scale=1.0",
-  },
+  twitter: { card: "summary_large_image", title, description },
 };
+
+// Apply the saved preference before paint; retain the previous site's storage key.
+const themeScript = `try { var saved = localStorage.getItem('isDarkMode'); document.documentElement.dataset.theme = saved === 'false' ? 'light' : 'dark'; } catch (_) {}`;
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
-        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className={`${geistFont.className} d-flex flex-column min-vh-100`}>
+      <body className={geist.variable}>
+        <a className="skip-link" href="#main-content">
+          Skip to content
+        </a>
         <Navbar />
         {children}
         <Footer />
-        <BootstrapClient />
         <Analytics />
       </body>
     </html>
