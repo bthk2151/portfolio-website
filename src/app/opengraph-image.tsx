@@ -42,7 +42,7 @@ export default function OpenGraphImage() {
       >
         <span>Thoughtful code.</span>
         <span style={{ display: "flex", gap: 20 }}>
-          <span>Meaningful</span>
+          <span>Driving</span>
           <span style={{ color: "#dba786" }}>impact.</span>
         </span>
       </div>

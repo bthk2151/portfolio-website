@@ -128,6 +128,7 @@ export const skills = [
       "Entity Framework",
       "Node.js",
       "Django",
+      "FastAPI",
     ],
   },
   {
@@ -160,9 +161,14 @@ export const services = [
       "An extra set of hands for your project. I work closely with stakeholders, developers, and designers to deliver functional requirements and collaborate from start to finish.",
   },
   {
-    title: "Data solutions",
+    title: "AI workflow automation",
     description:
-      "From raw data to actionable insights. I collaborate with a partner specializing in data pipelines, data structuring, and machine learning tools to help you make more of your information.",
+      "Reduce repetitive work with AI agents and automated workflows. I connect your tools, APIs, and business systems through Model Context Protocol (MCP) integrations to help teams move from manual steps to reliable, connected processes.",
+  },
+  {
+    title: "AI & data solutions",
+    description:
+      "Turn your data and documents into useful insights and answers. I build retrieval-augmented generation (RAG) solutions with vector search and contextual AI responses, collaborating with a data specialist on pipelines, data structuring, and machine learning where needed.",
   },
   {
     title: "Integrated solutions",

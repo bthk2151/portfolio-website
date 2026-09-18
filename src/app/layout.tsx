@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description,
   metadataBase: new URL(baseUrl),
   alternates: { canonical: "/" },
-  icons: { icon: "/favicon.png" },
+  icons: { icon: "/favicon.png?v=b-monogram" },
   openGraph: {
     title,
     description,

@@ -18,7 +18,7 @@ export default function Home() {
           <h1 id="hero-title">
             Thoughtful code.
             <br />
-            Meaningful
+            Driving
             <br />
             <em>impact.</em>
             <span className="headline-period" aria-hidden="true">
@@ -66,10 +66,6 @@ export default function Home() {
                 MALAYSIA <span aria-hidden="true">↗</span>
               </span>
             </div>
-          </div>
-          <div className="portrait-stamp">
-            <span>BUILD WITH</span>
-            <em>purpose.</em>
           </div>
           <span className="portrait-footnote">A human behind the code.</span>
         </div>
@@ -188,7 +184,7 @@ export default function Home() {
             alt="Bryan with his motorcycle outdoors"
             sizes="(max-width: 760px) 90vw, 40vw"
           />
-          <span className="photo-caption">OFFLINE, EVERY NOW AND THEN.</span>
+          <span className="photo-caption">OFFLINE, MORE SO THAN YOU THINK.</span>
         </div>
         <div className="about-copy">
           <p className="eyebrow section-index">04 / BEYOND THE KEYBOARD</p>
@@ -218,6 +214,7 @@ export default function Home() {
               <li>Weightlifting</li>
               <li>Instruments</li>
               <li>Coffee</li>
+              <li>Chess</li>
             </ul>
           </div>
         </div>
