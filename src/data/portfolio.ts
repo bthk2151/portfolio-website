@@ -156,19 +156,14 @@ export const services = [
       "From concept to launch, I craft bespoke, 0-to-1 software solutions tailored to your vision, with ongoing support to keep them up to date.",
   },
   {
-    title: "Collaborative development",
-    description:
-      "An extra set of hands for your project. I work closely with stakeholders, developers, and designers to deliver functional requirements and collaborate from start to finish.",
-  },
-  {
     title: "AI workflow automation",
     description:
-      "Reduce repetitive work with AI agents and automated workflows. I connect your tools, APIs, and business systems through Model Context Protocol (MCP) integrations to help teams move from manual steps to reliable, connected processes.",
+      "Streamline your processes with intelligent automation powered by AI and Model Context Protocol (MCP) integrations, reducing manual effort and increasing efficiency.",
   },
   {
     title: "AI & data solutions",
     description:
-      "Turn your data and documents into useful insights and answers. I build retrieval-augmented generation (RAG) solutions with vector search and contextual AI responses, collaborating with a data specialist on pipelines, data structuring, and machine learning where needed.",
+      "From raw data to actionable insights. I collaborate with a partner specializing in RAG, vector search, contextual answers, and data pipelines to help you make more of your information.",
   },
   {
     title: "Integrated solutions",
