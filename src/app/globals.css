@@ -853,16 +853,20 @@ h2 em {
 .service:first-child {
   border-top: 1px solid var(--line);
 }
-.service summary {
+.service-toggle {
   display: flex;
   align-items: center;
   gap: 20px;
   padding-block: 26px;
   cursor: pointer;
-  list-style: none;
+  width: 100%;
+  padding-inline: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
 }
-.service summary::-webkit-details-marker {
-  display: none;
+.service-title {
+  flex: 1;
 }
 .service-number {
   color: var(--accent);
@@ -880,14 +884,31 @@ h2 em {
   color: var(--muted);
   transition: transform 0.2s;
 }
-.service[open] svg {
+.service.is-open svg {
   transform: rotate(45deg);
   color: var(--accent);
 }
-.service > p {
+.service-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 300ms ease,
+    opacity 200ms ease;
+}
+.service.is-open .service-panel {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+.service-panel-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+.service-panel-inner > p {
   color: var(--muted);
   font-size: 16px;
-  margin: -5px 34px 26px;
+  margin: 0;
+  padding: 0 34px 26px;
   line-height: 1.8;
 }
 .contact-band {
@@ -1435,14 +1456,14 @@ h2 em {
   .personal-interests ul {
     gap: 14px 18px;
   }
-  .service summary {
+  .service-toggle {
     gap: 13px;
   }
   .service h3 {
     font-size: 18px;
   }
-  .service > p {
-    margin-inline: 25px 15px;
+  .service-panel-inner > p {
+    padding-inline: 25px 15px;
     font-size: 16px;
   }
   .contact-band .section {
