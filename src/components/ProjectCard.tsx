@@ -36,6 +36,7 @@ export default function ProjectCard({
           <Image
             src={project.image}
             alt={project.imageAlt}
+            priority={featured}
             sizes={
               featured
                 ? "(max-width: 760px) 90vw, 65vw"
@@ -43,14 +44,9 @@ export default function ProjectCard({
             }
           />
         </div>
-        {featured && (
-          <span className="project-visual-caption">
-            YOUR DOCUMENTS. CONNECTED.
-          </span>
-        )}
       </a>
       <div className="project-copy">
-        <p className="eyebrow">{project.category}</p>
+        {!featured && <p className="eyebrow">{project.category}</p>}
         <h3>{project.title}</h3>
         <p className="project-description">{project.description}</p>
         <ul className="tag-list" aria-label={`${project.title} technologies`}>
