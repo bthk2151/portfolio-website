@@ -39,3 +39,25 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Impeccable installation and local hooks
+/.agents/skills/impeccable/
+/.claude/skills/impeccable/
+/.claude/agents/impeccable-*.md
+/.claude/settings.local.json
+/.codex/hooks.json
+
+# Impeccable artifacts: retain only shared product context and configuration
+/DESIGN.md
+!/PRODUCT.md
+/.impeccable/*
+!/.impeccable/config.json
+!/.impeccable/live/
+/.impeccable/live/*
+!/.impeccable/live/config.json
+
+# Impeccable standalone live-mode runtime
+/.impeccable-live.json
+/.impeccable-live/
+/app/.impeccable-live/
+/src/.impeccable-live/

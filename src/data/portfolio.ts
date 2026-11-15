@@ -42,7 +42,7 @@ export const projects = [
     title: "RAG Bot",
     category: "AI & knowledge retrieval",
     description:
-      "Built with a partner, RAG Bot turns uploaded files into searchable vector embeddings, retrieves relevant context for Gemini-powered answers, and secures backend requests with short-lived JWTs.",
+      "A document Q&A proof of concept powered by Gemini. I built the frontend, UI/UX, authorization, uploads, and performance metrics; my partner focused on the backend and RAG pipeline.",
     image: imgRagBot,
     imageAlt:
       "RAG Bot interface showing uploaded documents and a contextual conversation",

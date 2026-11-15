@@ -12,70 +12,41 @@ export default function Home() {
     <main id="main-content" tabIndex={-1}>
       <section id="home" className="hero shell" aria-labelledby="hero-title">
         <div className="hero-copy">
-          <p className="eyebrow hero-intro">
-            <span className="status-dot" /> ENGINEER BY TRADE. BUILDER AT HEART.
-          </p>
           <h1 id="hero-title">
             Thoughtful code.
             <br />
-            Driving
-            <br />
-            <em>impact.</em>
-            <span className="headline-period" aria-hidden="true">
-              ↗
-            </span>
+            Driving <em>impact.</em>
           </h1>
           <p className="hero-description">
             I’m <strong>Bryan Tan Hoe Kin</strong>, a full-stack .NET developer,
-            software engineer, and solutions architect turning complex problems
-            into practical, considered solutions.
+            software engineer, and solutions architect based in Malaysia.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">
               Explore my work <Icon name="arrow-down" />
             </a>
-            <a className="text-link" href="#contact">
-              Let’s build something <Icon name="arrow-up-right" />
-            </a>
-          </div>
-          <div className="hero-note">
-            <span className="mini-cross" aria-hidden="true">
-              +
-            </span>
-            <p>
-              Grounded in systems.
-              <br />
-              <span>Driven by what’s possible.</span>
-            </p>
-          </div>
-        </div>
-        <div className="hero-portrait">
-          <span className="portrait-coordinate">
-            01° / A LITTLE INTRODUCTION
-          </span>
-          <div className="portrait-frame">
-            <Image
-              src={portrait}
-              alt="Bryan Tan in Kuala Lumpur, with the Petronas Twin Towers in the background"
-              priority
-              sizes="(max-width: 760px) 90vw, (max-width: 1100px) 40vw, 430px"
-            />
-            <div className="portrait-caption">
-              <span>BRYAN TAN</span>
-              <span>
-                MALAYSIA <span aria-hidden="true">↗</span>
-              </span>
+            <div className="hero-secondary-actions">
+              <a
+                className="text-link"
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Résumé <Icon name="arrow-up-right" />
+              </a>
+              <a className="text-link" href="#services">
+                Services <Icon name="arrow-down" />
+              </a>
             </div>
           </div>
-          <span className="portrait-footnote">A human behind the code.</span>
         </div>
-        <div className="hero-bottom">
-          <span>FULL-STACK DEVELOPMENT</span>
-          <span>SYSTEMS & INTEGRATIONS</span>
-          <span>ASPIRING TECHPRENEUR</span>
-          <a href="#work" aria-label="Scroll to selected work">
-            <Icon name="arrow-down" />
-          </a>
+        <div className="hero-portrait personal-photo">
+          <Image
+            src={portrait}
+            alt="Bryan Tan in Kuala Lumpur, with the Petronas Twin Towers in the background"
+            priority
+            sizes="(max-width: 760px) 90vw, 440px"
+          />
         </div>
       </section>
 
@@ -86,15 +57,10 @@ export default function Home() {
       >
         <div className="section-heading">
           <div>
-            <p className="eyebrow section-index">01 / SELECTED WORK</p>
             <h2 id="work-title">
-              Ideas made <em>real.</em>
+              Selected <em>work.</em>
             </h2>
           </div>
-          <p>
-            A collection of things I’ve built, explored,
-            <br className="desktop-break" /> and put out into the world.
-          </p>
         </div>
         <div className="project-grid">
           {projects.map((project, index) => (
@@ -179,11 +145,13 @@ export default function Home() {
         aria-labelledby="about-title"
       >
         <div className="about-photo">
-          <Image
-            src={personalPhoto}
-            alt="Bryan with his motorcycle outdoors"
-            sizes="(max-width: 760px) 90vw, 40vw"
-          />
+          <div className="about-photo-frame personal-photo">
+            <Image
+              src={personalPhoto}
+              alt="Bryan with his motorcycle outdoors"
+              sizes="(max-width: 760px) 90vw, 40vw"
+            />
+          </div>
           <span className="photo-caption">OFFLINE, MORE SO THAN YOU THINK.</span>
         </div>
         <div className="about-copy">
